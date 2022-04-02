@@ -41,6 +41,8 @@ namespace ExceltoECP
         public string Frequencia { get; set; }
         public string ModoGravacao { get; set; }
         public string Acoes { get; set; }
+        public string LockSensor { get; set; }
+
         public string Lado1Nome { get; set; }
         public string Lado1Sentido { get; set; }
 

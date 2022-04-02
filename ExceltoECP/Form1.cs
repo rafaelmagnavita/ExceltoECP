@@ -87,22 +87,23 @@ namespace ExceltoECP
                         porta.Type = "Door";
                         porta.ObGuid = i.ToString();
                         porta.BelongTo = dt.Rows[i][3].ToString();
-                        porta.SensorPorta = dt.Rows[i][15].ToString();
-                        porta.InterfacePreferida = dt.Rows[i][3].ToString();
-                        porta.Trancamento = dt.Rows[i][26].ToString();
-                        porta.TempoConcessao = dt.Rows[i][17].ToString();
-                        porta.ConcessaoAmp = dt.Rows[i][18].ToString();
-                        porta.Retrancamento = dt.Rows[i][19].ToString();
+                        porta.SensorPorta = dt.Rows[i][16].ToString();
+                        porta.InterfacePreferida = dt.Rows[i][13].ToString() + " - " + dt.Rows[i][14].ToString() + " - " + dt.Rows[i][15].ToString();
+                        porta.LockSensor = dt.Rows[i][17].ToString();
+                        porta.Trancamento = dt.Rows[i][27].ToString();
+                        porta.TempoConcessao = dt.Rows[i][18].ToString();
+                        porta.ConcessaoAmp = dt.Rows[i][19].ToString();
+                        porta.Retrancamento = dt.Rows[i][20].ToString();
                         porta.Lado1Nome = "Entrada";
                         porta.Lado1ObGuid = (i + "in").ToString();
-                        porta.Lado1Leitor = dt.Rows[i][20].ToString();
-                        porta.Lado1REX = dt.Rows[i][21].ToString();
-                        porta.Lado1SensorEntrada = dt.Rows[i][22].ToString();
+                        porta.Lado1Leitor = dt.Rows[i][21].ToString();
+                        porta.Lado1REX = dt.Rows[i][22].ToString();
+                        porta.Lado1SensorEntrada = dt.Rows[i][23].ToString();
                         porta.Lado2Nome = "Saída";
                         porta.Lado2ObGuid = (i + "out").ToString();
-                        porta.Lado2Leitor = dt.Rows[i][23].ToString();
-                        porta.Lado2REX = dt.Rows[i][24].ToString();
-                        porta.Lado2SensorEntrada = dt.Rows[i][25].ToString();
+                        porta.Lado2Leitor = dt.Rows[i][24].ToString();
+                        porta.Lado2REX = dt.Rows[i][25].ToString();
+                        porta.Lado2SensorEntrada = dt.Rows[i][26].ToString();
 
                         if (porta.Nome != "" && porta.BelongTo != "")
                             Portas.Add(porta);
@@ -120,6 +121,7 @@ namespace ExceltoECP
                             Unit.Gateway = dt.Rows[i][9].ToString();
                             Unit.Login = dt.Rows[i][10].ToString();
                             Unit.Password = dt.Rows[i][11].ToString();
+                            Unit.MAC = dt.Rows[i][12].ToString();
                             if (Unit.Nome != "" && Unit.BelongTo != "")
                                 Controladoras.Add(Unit);
                         }
