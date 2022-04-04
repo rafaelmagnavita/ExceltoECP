@@ -78,7 +78,7 @@ namespace ExceltoECP
                     accessManager.ObGuid = "AccessManager";
                     accessManager.Type = "AccessManager";
                     AccessManager.Add(accessManager);
-                    CreateXML(accessManager, @"C:\Logs\AccessManagers.xml");
+                    CreateXML(AccessManager, @"C:\Logs\AccessManagers.xml");
                     int count = dt.Rows.Count;
                     for (int i = 1; i < count; i++)
                     {
